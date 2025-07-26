@@ -1,6 +1,5 @@
-<img width="1366" height="768" alt="dashboard" src="https://github.com/user-attachments/assets/51b9cb02-dd4e-46fb-81ea-e32718c193f4" />
 # SmartHR
-
+<img width="1366" height="768" alt="dashboard" src="https://github.com/user-attachments/assets/51b9cb02-dd4e-46fb-81ea-e32718c193f4" />
 SmartHR isn’t your run-of-the-mill HR platform, it’s a futuristic, human-centric HR operating system designed to do more than just “manage” employees. It empowers them. It connects teams. It simplifies the chaos.
 
 I built SmartHR with one clear goal, to let humans do the human work, and let SmartHR handle the rest.
