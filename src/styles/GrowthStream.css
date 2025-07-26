@@ -1,0 +1,62 @@
+/* src/styles/GrowthStream.css */
+.growth-stream {
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --highlight: #00f0ff;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+}
+
+.growth-stream .entry {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  transition: 0.3s ease;
+}
+
+.growth-stream .entry:hover {
+  border-color: var(--highlight);
+}
+
+.skill-level .level-bar {
+  height: 8px;
+  background: var(--highlight);
+  border-radius: 4px;
+}
+.growth-tabs{
+    padding: 1.5rem;
+}
+.growth-tabs Button,
+.stream-content Button{
+    margin-bottom: 1rem;
+}
+.stream-content{
+    padding: 1.5rem;
+}
+
+.stream-content input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stream-content input::placeholder {
+  color: #d4dff1ff;
+}
+
+.stream-content input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+}

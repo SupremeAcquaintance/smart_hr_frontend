@@ -1,0 +1,77 @@
+/* src/styles/LeavePage.css */
+
+.leave-page.container {
+  padding: 2rem;
+  animation: fadeIn 0.4s ease-in;
+  color: var(--text);
+  border-radius: 12px;
+  box-shadow: var(--shadow-elevation);
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tab-panel {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 14 white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.leave-history .placeholder {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.leave-page.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Theme variables (light/dark defined globally via body[data-theme]) */
+:root {
+  --background: #f4f7fb;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --accent: #3366ff;
+  --muted: #6c757d;
+  --shadow-elevation: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --box: 0 0 14 #66052aff
+}
+
+body[data-theme='dark'] {
+  --background: #111827;
+  --box: 0 0 14 #0a0558ff
+  --surface: #1f2937;
+  --text: #f3f4f6;
+  --accent: #60a5fa;
+  --muted: #9ca3af;
+  --shadow-elevation: 0 8px 24px rgba(255, 255, 255, 0.03);
+  --shadow-card: 0 4px 12px rgba(255, 255, 255, 0.02);
+}

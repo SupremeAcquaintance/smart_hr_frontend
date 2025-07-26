@@ -1,0 +1,105 @@
+.team-climate {
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+}
+
+[data-theme='dark'] .team-climate {
+  background: rgba(18, 18, 30, 0.9);
+  box-shadow: 0 0 12px rgba(58, 0, 219, 0.5);
+}
+
+.climate-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #38bdf8, #8b5cf6);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 4px;
+}
+
+.climate-header p {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+[data-theme='dark'] .climate-header p {
+  color: #a1a1aa;
+}
+
+.mood-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.mood-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mood-btn svg {
+  font-size: 1.2rem;
+}
+
+/* Mood-specific styles */
+.mood-btn.happy {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.mood-btn.neutral {
+  background-color: rgba(234, 179, 8, 0.15);
+  color: #eab308;
+}
+
+.mood-btn.sad {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.mood-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* Dark theme buttons */
+[data-theme='dark'] .mood-btn.happy {
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+[data-theme='dark'] .mood-btn.neutral {
+  background-color: rgba(234, 179, 8, 0.1);
+}
+
+[data-theme='dark'] .mood-btn.sad {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.mood-submitted {
+  text-align: center;
+  font-weight: 500;
+  color: #10b981;
+}
+
+[data-theme='dark'] .mood-submitted {
+  color: #34d399;
+}
+
+.climate-chart {
+  margin-top: 2rem;
+}

@@ -1,0 +1,145 @@
+/* src/components/employees/TimeCapsule.css */
+.time-capsule {
+  padding: 2rem;
+  box-shadow: 0 0 14px var(--box);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.capsule-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-shadow: 0 0 5px var(--accent);
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 12px var(--box);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+.timeline-item.right {
+  flex-direction: row-reverse;
+}
+
+.timeline-point {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--card);
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  box-shadow: 0 0 12px var(--accent-glow);
+  position: relative;
+}
+
+.timeline-content {
+  background: var(--card);
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  margin-left: 1.5rem;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+}
+
+.date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.project-tag {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--accent-soft);
+  color: var(--accent-contrast);
+  border-radius: 8px;
+  font-size: 0.75rem;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.icon.achievement { color: #FFD700; } /* Gold */
+.icon.project     { color: #00BFFF; } /* DeepSkyBlue */
+.icon.education   { color: #ADFF2F; } /* GreenYellow */
+.icon.other       { color: #FF69B4; } /* HotPink */
+
+.loading,
+.empty {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  padding: 2rem 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Theme variables */
+:root {
+  --background: #0e0f1a;
+  --card: #1a1c2e;
+  --text-primary: #f5f6fa;
+  --text-secondary: #a0a4b8;
+  --accent: #6a5acd;
+  --accent-glow: #6a5acd88;
+  --accent-soft: #6a5acd22;
+  --accent-contrast: #fff;
+  --box: #42032fff;
+}

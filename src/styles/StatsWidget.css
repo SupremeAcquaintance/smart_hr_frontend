@@ -1,0 +1,87 @@
+/* src/components/dashboard/StatsWidget.css */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(100, 116, 139, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 28px rgba(0, 217, 255, 0.15);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #38bdf8;
+}
+
+.stat-content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.stat-content p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.stat-change {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.stat-change.positive {
+  color: #22c55e;
+}
+
+.stat-change.negative {
+  color: #ef4444;
+}
+
+.stat-change.neutral {
+  color: #facc15;
+}
+
+/* Light Theme Support */
+[data-theme='light'] .stat-card {
+  background: rgba(255, 255, 255, 0.85);
+  color: #1e293b;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .stat-content h3 {
+  color: #0f172a;
+}
+
+[data-theme='light'] .stat-content p {
+  color: #475569;
+}
+
+[data-theme='light'] .stat-icon {
+  color: #0ea5e9;
+}

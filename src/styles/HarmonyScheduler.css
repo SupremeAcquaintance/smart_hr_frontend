@@ -1,0 +1,134 @@
+/* src/components/leave/HarmonyScheduler.css */
+.harmony-scheduler {
+  background-color: var(--card-bg);
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-xl);
+  transition: background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.scheduler-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scheduler-header h2 {
+  font-size: 1.6rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--accent);
+}
+
+.impact-score, .impact-status {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.impact-score.low {
+  color: var(--success);
+}
+
+.impact-score.high {
+  color: var(--warning);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scheduler-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.calendar-section {
+  flex: 1 1 60%;
+}
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 35%;
+}
+
+.info-card {
+  background: var(--card-inner);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.coverage-suggestions {
+  margin-top: 1rem;
+}
+
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.coverage-card {
+  background: var(--card-inner);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.avatar {
+  background: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.match-score {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.scheduler-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loading {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}

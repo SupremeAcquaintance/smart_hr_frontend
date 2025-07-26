@@ -1,0 +1,31 @@
+/* src/pages/Dashboard.css */
+.dashboard-page {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.4s ease;
+}
+
+.dashboard-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #f83838ff, #0004f0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Light Theme Support */
+[data-theme='light'] .dashboard-page {
+  color: #0f172a;
+}
+
+[data-theme='light'] .dashboard-heading {
+  background: linear-gradient(90deg, #01afffff, #ff00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
