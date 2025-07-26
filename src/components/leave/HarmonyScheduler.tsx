@@ -131,7 +131,7 @@ const HarmonyScheduler: React.FC<HarmonySchedulerProps> = ({ employeeId }) => {
           <div className="impact-status"><FaSpinner className="spinner" /> Calculating Impact...</div>
         ) : (
           <div className={`impact-score ${impactScore > 5 ? 'high' : 'low'}`}>
-            <FaExclamationTriangle /> Impact: 3.5/10
+            <FaExclamationTriangle /> Impact: {impactScore}/10
           </div>
         )}
       </header>
